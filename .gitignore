@@ -1,0 +1,11 @@
+# python
+__pycache__/
+*.py[cod]
+
+# local test artifacts (the DB is built by make_db.py / the Dockerfile)
+challenge.db
+*.db
+
+# os / editor
+.DS_Store
+*.swp
