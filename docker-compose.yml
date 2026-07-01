@@ -1,0 +1,14 @@
+# Spin up the vulnerable challenge target:
+#   docker compose up -d --build
+# Then run the exploit from the host:
+#   python3 sqli_exploit.py http://127.0.0.1:4001
+# Tear down:
+#   docker compose down
+services:
+  vuln-app:
+    build: .
+    image: cw-sqli-challenge
+    container_name: cw-sqli-challenge
+    ports:
+      - "4001:4001"
+    restart: unless-stopped

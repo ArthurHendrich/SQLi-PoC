@@ -1,0 +1,9 @@
+# Keep the build context clean and reproducible: the image builds its OWN
+# challenge.db via `RUN python make_db.py`, so never copy a host-built one in.
+**/challenge.db
+**/__pycache__/
+*.pyc
+sqli_exploit.py
+Dockerfile
+docker-compose.yml
+.dockerignore
